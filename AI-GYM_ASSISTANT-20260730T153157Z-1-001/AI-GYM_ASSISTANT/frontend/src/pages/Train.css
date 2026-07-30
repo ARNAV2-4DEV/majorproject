@@ -1,0 +1,135 @@
+.train-page {
+  padding: var(--space-5) 0 var(--space-6);
+}
+
+.train-page__title {
+  font-size: 2.2rem;
+  margin-top: var(--space-1);
+}
+
+.train-page__sub {
+  margin-top: var(--space-2);
+  max-width: 52ch;
+}
+
+.train-page__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.field-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--chalk-dim);
+}
+
+select, input[type="file"] {
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  color: var(--chalk);
+  padding: 0.6rem 0.9rem;
+  font-family: var(--font-body);
+  border-radius: 2px;
+}
+
+.mode-toggle {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+.mode-toggle__btn {
+  background: transparent;
+  border: none;
+  color: var(--chalk-dim);
+  padding: 0.6rem 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mode-toggle__btn--active {
+  background: var(--ember);
+  color: var(--ink);
+}
+
+.live-panel {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.live-panel__video-wrap {
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.live-panel__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.live-panel__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.upload-panel {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  max-width: 480px;
+}
+
+.live-stats {
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  padding: var(--space-3);
+}
+
+.live-stats__primary {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--ember);
+}
+
+.live-stats__row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-1);
+  font-size: 0.9rem;
+  color: var(--chalk-dim);
+}
+
+.error-text {
+  color: #e0685c;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 780px) {
+  .live-panel {
+    grid-template-columns: 1fr;
+  }
+  .mode-toggle {
+    margin-left: 0;
+  }
+}

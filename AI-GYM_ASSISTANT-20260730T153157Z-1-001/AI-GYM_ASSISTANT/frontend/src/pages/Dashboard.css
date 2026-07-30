@@ -1,0 +1,140 @@
+.dashboard-page {
+  padding: var(--space-5) 0 var(--space-6);
+}
+
+.dashboard-page__title {
+  font-size: 2.2rem;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.habit-banner {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.habit-banner__streak {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.habit-banner__streak-value {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--ember);
+  line-height: 1;
+}
+
+.habit-banner__streak-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--chalk-dim);
+  margin-top: 0.3rem;
+}
+
+.habit-banner__body {
+  flex: 1;
+}
+
+.habit-banner__reason {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.risk-pill {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+
+.risk-pill--low {
+  background: rgba(111, 168, 143, 0.18);
+  color: var(--sage);
+}
+
+.risk-pill--medium {
+  background: rgba(232, 150, 58, 0.18);
+  color: var(--ember);
+}
+
+.risk-pill--high {
+  background: rgba(224, 104, 92, 0.18);
+  color: #e0685c;
+}
+
+.risk-pill--unknown {
+  background: rgba(168, 167, 159, 0.18);
+  color: var(--chalk-dim);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.history-panel {
+  background: var(--ink-raised);
+  border: 1px solid var(--line);
+  padding: var(--space-3);
+}
+
+.history-panel__empty {
+  color: var(--chalk-dim);
+  font-size: 0.9rem;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.history-list__item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--space-2);
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.4rem;
+}
+
+.history-list__exercise {
+  text-transform: capitalize;
+}
+
+.history-list__metric {
+  font-family: var(--font-display);
+  color: var(--ember);
+}
+
+.history-list__date {
+  color: var(--chalk-dim);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 780px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .habit-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
